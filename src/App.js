@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import logo from './logo.svg'
 import './App.css'
 
@@ -24,7 +25,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Preact widget boilerplate</h2>
+          <h1>Preact widget boilerplate</h1>
         </div>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
