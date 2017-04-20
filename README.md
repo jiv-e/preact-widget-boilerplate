@@ -52,12 +52,12 @@ src/
   reducers.js
 ```
 
-This boilerplate suggests bundling component related files together. This means
+This boilerplate suggests bundling component related files together. It means
 that Redux actions, reducers and
 [container components](http://redux.js.org/docs/basics/UsageWithReact.html#presentational-and-container-components)
-are in the same folder with the contained component. This goes against Redux's
-creator Dan Abrimov's ideas about decoupling state management more loosely.
-If you don't like it you can change it.
+are in the same folder with the actual presentational component. This goes
+against Redux's creator Dan Abrimov's ideas about decoupling state management
+more loosely. If you don't like it you can change it.
 
 Some special things to note:
 
@@ -66,8 +66,10 @@ Some special things to note:
 - Shared generic components are in components/_common
 - Sub components are inside the parent component's folder
 - Reducers are collected together in src/reducers.js
-- If you need to dispatch other components actions try to follow
-[this rule](https://jaysoo.ca/2016/02/28/organizing-redux-application/#rule-2-create-strict-module-boundaries)
+- If you need to dispatch one component's actions from another component try to
+follow [this rule](https://jaysoo.ca/2016/02/28/organizing-redux-application/#rule-2-create-strict-module-boundaries)
+- In some cases you can consider using global actions. For this see
+src/GlobalActions.js, src/app/index.js, CounterReducer.js and ToggleReducer.js
 
 Read these articles if you want to understand the reasoning behind this folder
 structure.
