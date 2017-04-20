@@ -11,7 +11,6 @@ https://github.com/facebookincubator/create-react-app/blob/05f3f5ee81aec9429f00f
 ## Additional features
  - Redux for state management
  - Jest and Enzyme for testing
- - Preact for production builds
 
 ## Notes
 React is replaced by adding resolve aliases to Webpack configuration. React is
