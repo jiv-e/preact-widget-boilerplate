@@ -1,0 +1,11 @@
+.toggle {
+  margin: 20px 0;
+}
+
+.toggle.-on {
+  color: green;
+}
+
+.toggle.-off {
+  color: red;
+}
