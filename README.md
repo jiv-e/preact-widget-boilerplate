@@ -71,6 +71,13 @@ You can compile the production build with the build script.
 $ yarn run build
 ```
 
+### Test
+
+You can run tests with the test script.
+```
+yarn run test
+```
+
 ## License
 
-[MIT](/LICENSE)
+MIT
