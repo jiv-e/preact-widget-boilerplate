@@ -32,7 +32,7 @@ File size after gzip:
   - 12.25 KB  build/static/js/main.1870a513.js
 
 ## Usage
-###Install Node.js
+### Install Node.js
 Recommended Node.js version is written in .nvmrc file. The right version of
 Node.js can be installed in many ways on your system.
 [NVM](https://github.com/creationix/nvm) is recommended.
