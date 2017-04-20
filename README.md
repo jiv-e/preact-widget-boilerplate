@@ -21,6 +21,37 @@ tests may become unreliable. Until some problems are noticed I will keep it this
 way.
 
 ### Folder structure
+```
+src/
+  app
+    App.css
+    App.js
+    App.test.js
+    Header.js
+    Intro.js
+  assets
+    logo.svg
+  components
+    _common
+      Button.js
+    counter
+      Counter.css
+      Counter.js
+      CounterActions.js
+      CounterReducer.js
+      CounterValueDisplay.js
+      index.js
+    toggle
+      index.js
+      Toggle.css
+      Toggle.js
+      ToggleActions.js
+      ToggleReducer.js
+  index.css
+  index.js
+  reducers.js
+```
+
 This boilerplate suggests bundling component related files together. This means
 that Redux actions, reducers and
 [container components](http://redux.js.org/docs/basics/UsageWithReact.html#presentational-and-container-components)
@@ -31,14 +62,14 @@ If you don't like it you can change it.
 Some special things to note:
 
 - App component has it's own folder
-- Container components are inside components index.js file
-- Shared generic components are insided components/_common
+- Container components are defined in components index.js file
+- Shared generic components are in components/_common
 - Sub components are inside the parent component's folder
 - Reducers are collected together in src/reducers.js
 - If you need to dispatch other components actions try to follow
 [this rule](https://jaysoo.ca/2016/02/28/organizing-redux-application/#rule-2-create-strict-module-boundaries)
 
-Read these articles if you want to understand the reasoning behind the folder
+Read these articles if you want to understand the reasoning behind this folder
 structure.
 
 - https://marmelab.com/blog/2015/12/17/react-directory-structure.html
