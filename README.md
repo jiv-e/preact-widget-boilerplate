@@ -8,7 +8,7 @@ utilize it's great documentation directly.
 Learn more: [Create React App guide](
 https://github.com/facebookincubator/create-react-app/blob/05f3f5ee81aec9429f00f57d17b499d8a22aadef/packages/react-scripts/template/README.md)
 
-##Additional features
+## Additional features
  - Redux for state management
  - Jest and Enzyme for testing
  - Preact for production builds
