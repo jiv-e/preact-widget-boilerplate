@@ -23,12 +23,12 @@ from using it for that also.
  - Includes helpful example code for learning purposes and getting you started.
 
 ### Create React App
-Create React App is a tool created by Facebook for easy starting point for React
-development. PWB is based on "ejected" Create React App. [Create
-React App documentation](https://github.com/facebookincubator/create-react-app/blob/05f3f5ee81aec9429f00f57d17b499d8a22aadef/packages/react-scripts/template/README.md)
-offers a lot of good information about the setup.
+Create React App is a tool created by Facebook. It gives an easy well documented
+starting point for React development. PWB is based on "ejected" Create React App
+. [Create React App documentation](https://github.com/facebookincubator/create-react-app/blob/05f3f5ee81aec9429f00f57d17b499d8a22aadef/packages/react-scripts/template/README.md)
+offers a lot of good information about the setup and it's possibilities.
 
-### Preact
+### Preact and preact-compat
 Preact is a lighter version of React. With
 [preact-compat](https://github.com/developit/preact-compat) library it works
 as a drop in replacement for React. It has essentially the same features but
