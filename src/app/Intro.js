@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => (
   <p className="app-intro">
-    To get started, edit <code>src/App.js</code> and save to reload.
+    To get started, edit <code>src/app/App.js</code> and save to reload.
   </p>
 )
 
