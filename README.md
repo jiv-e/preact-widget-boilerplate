@@ -5,7 +5,7 @@ website?
 Great! PWB is a lightweight opinionated boilerplate for making them.
 
 PWB offers modern tooling for building your widget. The result is a folder
-with compressed Javascript and CSS files. It also includes used assets like
+with compressed Javascript and CSS files, which also includes assets like
 images in one subfolder. You just need to include the JS and CSS references in
 your HTML and specify the ID of the element you want to have replaced by the
 rendered widget.
@@ -15,27 +15,24 @@ PWB is not meant for single page applications, but there's nothing stopping you
 from using it for that also. 
 
 ## Features
- - Based on [Create React App](https://github.com/facebookincubator/create-react-app)
- - React replaced with [Preact](https://preactjs.com/)
- - State management with [Redux](http://redux.js.org/)
- - Testing with [Jest](https://facebook.github.io/jest/) and [Enzyme](http://airbnb.io/enzyme/)
- - Opinionated folder structure
- - Includes example code
-   - ...for getting you started
-   - ...for showing the best practices
-   - ...If you don't like it... just remove it.
+ - Based on [Create React App](https://github.com/facebookincubator/create-react-app).
+ - React is replaced with [Preact](https://preactjs.com/) (except for tests).
+ - State is managed [Redux](http://redux.js.org/).
+ - Uses [Jest](https://facebook.github.io/jest/) and [Enzyme](http://airbnb.io/enzyme/) for testing.
+ - Offers opinionated folder structure
+ - Includes helpful example code for learning purposes and getting you started.
 
 ### Create React App
-Create React App is a tool created by Facebook for starting React development
-easier. PWB is based on "ejected" Create React App. This allows to use [Create
+Create React App is a tool created by Facebook for easy starting point for React
+development. PWB is based on "ejected" Create React App. [Create
 React App documentation](https://github.com/facebookincubator/create-react-app/blob/05f3f5ee81aec9429f00f57d17b499d8a22aadef/packages/react-scripts/template/README.md)
-for your benefit.
+offers a lot of good information about the setup.
 
 ### Preact
 Preact is a lighter version of React. With
 [preact-compat](https://github.com/developit/preact-compat) library it works
-as a drop in replacement for React. Essentially same features but dramatically
-reduced build size.
+as a drop in replacement for React. It has essentially the same features but
+dramatically reduced build size.
 
 React is replaced [by adding resolve aliases to Webpack configuration](https://github.com/developit/preact-compat#usage-with-webpack).
 It's easy to switch back using React if you need to.
@@ -56,14 +53,18 @@ File size after gzip:
   - 12.25 KB  build/static/js/main.1870a513.js
 
 ### Redux
-Redux is a state management library. It has become really popular. It's chosen
-here because it enforces you to structure your code in a certain way. If your
+Redux is a state management library, which has become really popular. It's chosen
+for PWB because it directs you to structure your code in a certain way. If your
 application grows this should result in more organized and testable codebase.
+
+If this feels too clunky or restricting you can always change it. Maybe you could
+try MobX? For small widgets you can very well only need one or two components.
+In this case you could be fine with React's setState method.
 
 PWB also supports [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd).
 
 ### Testing
-[Create React App documentation about testing](https://github.com/facebookincubator/create-react-app/blob/05f3f5ee81aec9429f00f57d17b499d8a22aadef/packages/react-scripts/template/README.md#running-tests)
+See: [Create React App documentation about testing](https://github.com/facebookincubator/create-react-app/blob/05f3f5ee81aec9429f00f57d17b499d8a22aadef/packages/react-scripts/template/README.md#running-tests)
 
 Use this documentation for assertions: https://facebook.github.io/jest/docs/expect.html#content
 
@@ -82,7 +83,10 @@ src/
     App.js
     App.test.js
     Header.js
+    Header.test.js
+    index.js
     Intro.js
+    Intro.test.js
   assets
     logo.svg
   components
@@ -91,8 +95,11 @@ src/
     counter
       Counter.css
       Counter.js
+      Counter.test.js
       CounterActions.js
+      CounterActions.test.js
       CounterReducer.js
+      CounterReducer.test.js
       CounterValueDisplay.js
       index.js
     toggle
@@ -100,32 +107,38 @@ src/
       Toggle.css
       Toggle.js
       ToggleActions.js
+      ToggleActions.test.js
       ToggleReducer.js
+      ToggleReducer.test.js
+  GlobalActions.js
+  GlobalActions.test.js
   index.css
   index.js
   reducers.js
+
 ```
 
-This boilerplate suggests bundling related files together around components.
+PWB suggests bundling related files together around components.
 It means that Redux actions, reducers and
 [container components](http://redux.js.org/docs/basics/UsageWithReact.html#presentational-and-container-components)
 are in the same folder with the actual presentational component. This goes
 against Redux's creator Dan Abrimov's ideas about decoupling state management
-more loosely. If you don't like it you can change it.
+more loosely. If you don't like it you can make a fork or create an issue to
+start conversation about the best way to do this.
 
 Some special things to note:
 
-- App component has it's own folder
-- Container components are defined in components index.js file
-- Shared generic components are in components/_common
-- Sub components are inside the parent component's folder
-- Reducers are collected together in src/reducers.js
-- If you need to dispatch one component's actions from another component try to
-follow [this rule](https://jaysoo.ca/2016/02/28/organizing-redux-application/#rule-2-create-strict-module-boundaries)
+- App component has it's own folder.
+- Container components are defined in components index.js file.
+- Shared generic components are in components/_common.
+- Sub components are inside the parent component's folder.
+- Reducers are collected together in src/reducers.js.
+- If you need to dispatch one component's actions from another component you. 
+could try to follow [this rule](https://jaysoo.ca/2016/02/28/organizing-redux-application/#rule-2-create-strict-module-boundaries).
 - In some cases you can consider using global actions. For this see
-src/GlobalActions.js, src/app/index.js, CounterReducer.js and ToggleReducer.js
+src/GlobalActions.js, src/app/index.js, CounterReducer.js and ToggleReducer.js.
 
-Read these articles if you want to understand the reasoning behind this folder
+Read articles below if you want to understand some of the reasoning behind this
 structure.
 
 - https://marmelab.com/blog/2015/12/17/react-directory-structure.html
@@ -135,9 +148,8 @@ structure.
 
 ## Usage
 ### Install Node.js
-Tested and recommended Node.js version is written in [.nvmrc](.nvmrc) file. The
-right version of Node.js can be installed in many ways on your system. Here's
-some tips.
+Tested and recommended Node.js version is written in [.nvmrc](.nvmrc) file.
+There's many ways to install Node.js on your system. Here's some tips.
 
 #### Mac OS and Linux
 Use [NVM](https://github.com/creationix/nvm). You can find NVM install instructions [here](https://github.com/creationix/nvm#installation). After installing run the following command in the project root to use the right version of Node.js.
