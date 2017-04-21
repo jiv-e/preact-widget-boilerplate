@@ -1,14 +1,18 @@
 # Preact widget boilerplate (PWB)
-PWB is lightweight opinionated boilerplate for making web page widgets.
+Do you want to create a modern Javascript thingy for a static or CMS based
+website?
 
-Do you want to create modern Javascript thingie for your static or CMS based
-website? You came to the right place!
+Great! PWB is a lightweight opinionated boilerplate for making them.
 
 PWB offers modern tooling for building your widget. The result is a folder
 with compressed Javascript and CSS files. It also includes used assets like
 images in one subfolder. You just need to include the JS and CSS references in
 your HTML and specify the ID of the element you want to have replaced by the
-rendered widget. You can have multiple different widgets on the same page.
+rendered widget.
+
+The idea is that you can insert multiple different widgets on the same page.
+PWB is not meant for single page applications, but there's nothing stopping you
+from using it for that also. 
 
 ## Features
  - Based on [Create React App](https://github.com/facebookincubator/create-react-app)
