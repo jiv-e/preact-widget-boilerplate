@@ -57,9 +57,10 @@ Redux is a state management library, which has become really popular. It's chose
 for PWB because it directs you to structure your code in a certain way. If your
 application grows this should result in more organized and testable codebase.
 
-If this feels too clunky or restricting you can always change it. Maybe you could
-try MobX? For small widgets you can very well only need one or two components.
-In this case you could be fine with React's setState method.
+If this feels too clunky or restricting you can replace it. Maybe you could
+try MobX? Or for small widgets with couple of components you could be fine with
+React's setState component method. Sometimes it's overkill to use a shared state
+tree.
 
 PWB also supports [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd).
 
