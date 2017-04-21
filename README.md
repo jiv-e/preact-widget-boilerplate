@@ -17,7 +17,7 @@ from using it for that also.
 ## Features
  - Based on [Create React App](https://github.com/facebookincubator/create-react-app).
  - React is replaced with [Preact](https://preactjs.com/) (except for tests).
- - State is managed [Redux](http://redux.js.org/).
+ - State is managed by [Redux](http://redux.js.org/).
  - Uses [Jest](https://facebook.github.io/jest/) and [Enzyme](http://airbnb.io/enzyme/) for testing.
  - Offers opinionated folder structure
  - Includes helpful example code for learning purposes and getting you started.
