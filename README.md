@@ -147,6 +147,28 @@ structure.
 - https://jaysoo.ca/2016/02/28/applying-code-organization-rules-to-concrete-redux-code/
 - https://jaysoo.ca/2016/12/12/additional-guidelines-for-project-structure/
 
+### Not included
+#### Server side rendering
+While it would be great to have server side rendered widgets it would add
+unnecessary complexity and requirements. This project aims to build easily
+embeddable widgets.
+
+If you have a static website you would need to compile it or parts of the page
+with Node.js. This boilerplate is not for that. If you really think this is
+important you could try to play with [react-snapshot](https://www.npmjs.com/package/react-snapshot).
+
+If you have a PHP based CMS site for example you would need to separately
+inject Node.js generated markup in. While this is possible it's left out from
+this repo. If you are interested in this, read the following article.
+
+Creating SSR as a service: [Rendering ReactJS templates server-side by Frank de Jonge
+](https://blog.frankdejonge.nl/rendering-reactjs-templates-server-side/).
+
+#### Routing
+In this project's opinion state of the widget can be dependent on the URL,
+but the widget should not be able to change the URL. So routing is out of the
+picture. If you disagree, make a fork. 
+
 ## Usage
 ### Install Node.js
 Tested and recommended Node.js version is written in [.nvmrc](.nvmrc) file.
