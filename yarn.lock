@@ -2043,6 +2043,10 @@ expand-range@^1.8.1:
   dependencies:
     fill-range "^2.1.0"
 
+expect-element:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/expect-element/-/expect-element-1.1.1.tgz#87c76b55c3c9764423d7011e0c8566f6d3ddf358"
+
 express@^4.13.3:
   version "4.15.2"
   resolved "https://registry.yarnpkg.com/express/-/express-4.15.2.tgz#af107fc148504457f2dca9a6f2571d7129b97b35"

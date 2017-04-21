@@ -64,6 +64,9 @@ PWB also supports [Redux DevTools](https://chrome.google.com/webstore/detail/red
 
 ### Testing
 [Create React App documentation about testing](https://github.com/facebookincubator/create-react-app/blob/05f3f5ee81aec9429f00f57d17b499d8a22aadef/packages/react-scripts/template/README.md#running-tests)
+
+Use this documentation for assertions: https://facebook.github.io/jest/docs/expect.html#content
+
 #### Notes about testing and preact-compat
 React is still used when tests are run because Jest doesn't use Webpack. This is a little
 bit dangerous. If preact-compat has some issues replicating React's features
