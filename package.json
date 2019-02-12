@@ -31,6 +31,8 @@
     "eslint-plugin-import": "2.0.1",
     "eslint-plugin-jsx-a11y": "4.0.0",
     "eslint-plugin-react": "6.4.1",
+    "expect": "^24.1.0",
+    "expect-element": "^1.1.1",
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.10.0",
     "fs-extra": "0.30.0",
@@ -80,7 +82,8 @@
     ],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
-    }
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js"
   },
   "babel": {
     "presets": [
